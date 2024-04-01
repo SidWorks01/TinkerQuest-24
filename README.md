@@ -31,12 +31,16 @@ To use DocAI, follow these steps:
 ```bash
   git clone https://github.com/sajji18/TinkerQuest-24.git
 ```
-2. Install the required dependencies using `pip install -r requirements.txt`.
-3. Set up your Google OAuth credentials.
-4. To create an admin user run `python manage.py createsuperuser`.
-5. To create a doctor account run `python manage.py create_user`.
-6. Run the Django development server: `python manage.py runserver`.
-7. Access the application at
+2. Create a virtual environment using `python -m venv .env`.
+3. Activate the virtual environment using `source .env/Scripts/activate` on bash OR `.env\Scripts\activate` on cmd.
+4. Install the required dependencies using `pip install -r requirements.txt`.
+5. Run the Django development server: `python manage.py runserver`.
+6. To create an admin user run `python manage.py createsuperuser`.
+7. To create a doctor account run `python manage.py create_user`.
+8. Set up your Google OAuth credentials. For this, go to `localhost:8000/admin` and log in using the superuser credentials. In the social applications menu on the left, set up the Google OAuth Service using the client_id, secret_key from the secret.json in the base directory. (Also, don't forget to change the domain name and site URL in the site settings in admin panel to localhost instead of 127.0.0.1).
+9. Create a customer account.
+10. To create and apply for test, use Test group in the admin panel to create the test with the doctor account as creator and Test Application group to create the test application for the required customer with the concerned test.
+11. Access the application at
 `http://localhost:8000`.
 
 ## 📖 Video Demonstration and Presentation
